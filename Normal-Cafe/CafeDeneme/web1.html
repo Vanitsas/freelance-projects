@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyif Cafe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-50">
+
+  <!-- Header / Hero -->
+  <header class="relative">
+    <img src="resim/hero.jpg" alt="Kafe Hero" class="w-full h-[500px] object-cover">
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center bg-black bg-opacity-30 text-white">
+      <img src="resim/logo.jpg" alt="Kafe Logo" class="w-24 h-24 mb-2">
+      <h1 class="text-4xl font-bold mb-2">Keyif Cafe</h1>
+      <p class="mb-4">Lezzeti ve huzuru bir arada</p>
+      <a href="#iletisim" class="bg-green-600 px-4 py-2 rounded hover:bg-green-700">Rezervasyon</a>
+    </div>
+  </header>
+
+
+<!-- Hakkımızda -->
+<section class="p-6 md:flex md:items-center md:gap-8 bg-white">
+  <!-- Sol taraf: metin + ikonlar -->
+  <div class="md:w-1/2 mb-4 md:mb-0">
+    <h2 class="text-2xl font-semibold mb-2">Hakkımızda</h2>
+    <p class="mb-2">
+      Şehrin en güzel kahvelerini sunan, samimi ortamıyla sizi bekleyen Keyif Cafe, 
+      her ziyaretçisine evindeymiş hissi verir.
+    </p>
+    <p class="mb-4">
+      Kurulduğumuz günden beri, kaliteli kahve çekirdekleri ve taze ürünlerimizle 
+      misafirlerimize eşsiz bir deneyim sunuyoruz. Sadece lezzet değil, huzuru da paylaşmayı seviyoruz.
+    </p>
+    <a href="#iletisim" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Rezervasyon Yap</a>
+
+    <!-- Mini ikonlar / özellikler -->
+    <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+      <!-- Kahve -->
+      <div class="flex flex-col items-center">
+        <img src="resim/kahveicon.jpg" alt="Kahve" class="w-16 h-16 mb-1">
+        <span class="text-sm md:text-base">Taze Kahve</span>
+      </div>
+
+      <!-- Tatlı -->
+      <div class="flex flex-col items-center">
+        <img src="resim/tatliicon.jpg" alt="Tatlı" class="w-16 h-16 mb-1">
+        <span class="text-sm md:text-base">Lezzetli Tatlılar</span>
+      </div>
+
+      <!-- Huzurlu Ortam -->
+      <div class="flex flex-col items-center">
+        <img src="resim/huzurluortamicon.jpg" alt="Huzur" class="w-16 h-16 mb-1">
+        <span class="text-sm md:text-base">Huzurlu Ortam</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sağ taraf: görsel -->
+  <div class="md:w-1/2">
+    <img src="resim/hakkimizda.jpg" alt="Kafe ortamı" class="rounded w-full shadow-lg">
+  </div>
+</section>
+
+
+  <!-- Menü / Hizmetler -->
+  <section class="p-6 bg-gray-100">
+    <h2 class="text-2xl font-semibold mb-6 text-center">Menü</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      
+      <!-- Çay -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg hover:scale-105 transition text-center p-4">
+        <img src="resim/Çay.jpg" alt="Çay" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="font-semibold">Çay</h3>
+      </div>
+
+      <!-- Tatlı -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg hover:scale-105 transition text-center p-4">
+        <img src="resim/tatli.jpg" alt="Tatlı" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="font-semibold">Tatlı</h3>
+      </div>
+
+      <!-- Atıştırmalık -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg hover:scale-105 transition text-center p-4">
+        <img src="resim/atiştirmalik.jpg" alt="Atıştırmalık" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="font-semibold">Atıştırmalık</h3>
+      </div>
+
+      <!-- Kahve -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg hover:scale-105 transition text-center p-4">
+        <img src="resim/kahve.jpg" alt="Kahve" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="font-semibold">Kahve</h3>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- İletişim -->
+  <section id="iletisim" class="p-6">
+    <h2 class="text-2xl font-semibold mb-4 text-center">İletişim</h2>
+    <div class="md:flex md:justify-between md:items-start gap-4">
+      <div class="md:w-1/2 mb-4 md:mb-0 text-center md:text-left">
+        <p>Adres: Ali pasa Mah. Gürpınar cad. <br> Çorlu/Tekirdag</p>
+        <p>Telefon: 0 999 993 99 99</p>
+        <a href="https://wa.me/905551234567" class="text-white bg-green-600 px-4 py-2 rounded inline-block mt-2 hover:bg-green-700">WhatsApp</a>
+      </div>
+      <div class="md:w-1/2">
+        <iframe class="w-full h-48 rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.053904829275!2d31.235712!3d30.044420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458416e3f1ee1ed%3A0x0!2zMzDCsDAyJzQ2LjQiTiAzMcKwMTQnMzMuMSJF!5e0!3m2!1str!2str!4v1600000000000!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-4">
+    <p>© 2026 Keyif Cafe. Tüm hakları saklıdır.</p>
+  </footer>
+
+</body>
+</html>

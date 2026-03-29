@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuaför & Berber Shop</title>
+  <style>
+    /* Genel Ayarlar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Buton */
+.btn {
+  display: inline-block;
+  background-color: #2a9d8f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+.btn:hover {
+  background-color: #21867a;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+}
+.hero-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.hero-text p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Section */
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Hizmetler Grid */
+.hizmetler-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.hizmet-card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.hizmet-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Galeri Grid */
+.galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+.galeri-grid img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header / Hero -->
+  <header class="hero">
+    <img src="images/barbershop_hero.jpg" alt="Barber Shop Hero" class="hero-img">
+    <div class="hero-text">
+      <h1>Kuaför & Berber Shop</h1>
+      <p>Saç ve Sakalın Sanatı</p>
+      <a href="#iletisim" class="btn">Rezervasyon Yap</a>
+    </div>
+  </header>
+
+  <!-- Hizmetler -->
+  <section id="hizmetler" class="section">
+    <h2>Hizmetlerimiz</h2>
+    <div class="hizmetler-grid">
+      <div class="hizmet-card">
+        <img src="images/erkek/erkek1.jpg" alt="Erkek Saç 1">
+        <h3>Grave Cut</h3>
+      </div>
+      <div class="hizmet-card">
+        <img src="images/erkek/erkek2.jpg" alt="Erkek Saç 2">
+        <h3>Fade Haircut</h3>
+      </div>
+      <div class="hizmet-card">
+        <img src="images/kadin/kadin1.jpg" alt="Kadın Saç 1">
+        <h3>Modern Bob</h3>
+      </div>
+      <div class="hizmet-card">
+        <img src="images/kadin/kadin2.jpg" alt="Kadin Saç 2">
+        <h3>Trend Haircut</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeri -->
+  <section id="galeri" class="section">
+    <h2>Galeri</h2>
+    <div class="galeri-grid">
+      <!-- Erkek saçları -->
+      <img src="images/erkek/erkek3.jpg" alt="Erkek Saç 3">
+      <img src="images/erkek/erkek4.jpg" alt="Erkek Saç 4">
+      <!-- Kadın saçları -->
+      <img src="images/kadin/kadin3.jpg" alt="Kadin Saç 3">
+      <img src="images/kadin/kadin4.jpg" alt="Kadin Saç 4">
+      <img src="images/kadin/kadin5.jpg" alt="Kadin Saç 5">
+    </div>
+  </section>
+
+  <!-- İletişim -->
+  <section id="iletisim" class="section">
+    <h2>İletişim</h2>
+    <p>Adres: Örnek Mah. Kuaför Cad. No:10</p>
+    <p>Telefon: 0 555 555 55 55</p>
+    <a href="https://wa.me/905555555555" class="btn">WhatsApp</a>
+  </section>
+
+  <footer>
+    <p>© 2026 Barber Shop. Tüm hakları saklıdır.</p>
+  </footer>
+
+</body>
+</html>

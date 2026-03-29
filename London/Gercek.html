@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London a Hoşgeldiniz</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: white;
+            color: #333;
+        }
+        header {
+            background: #950606;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .logo {
+            background: white;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .logo img {
+            width: 80px;
+            height: 80px;
+            vertical-align: middle;
+        }
+        .logo h1 {
+            display: inline-block;
+            margin: 0;
+            font-size: 28px;
+            vertical-align: middle;
+            color: #950606;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background: #950606;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        nav ul li a:hover {
+            background: #a83232;
+            border-radius: 5px;
+        }
+        .intro, .highlights {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #950606;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .intro h2, .highlights h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .intro p, .highlights ul li p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .intro img, .highlights ul li img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .highlights ul {
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+            list-style: none;
+        }
+        .highlights ul li {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            max-width: 300px;
+            text-align: center;
+            color: #333;
+        }
+        footer {
+            text-align: center;
+            background: #950606;
+            color: white;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+		audio {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 400px;
+}       }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logolondon.png" alt="Лого на сайта">
+            <h1>Лондон!</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Начало</a></li>
+                <li><a href="#history">История</a></li>
+                <li><a href="#attractions">Забележителности</a></li>
+                <li><a href="#culture">Култура и кухня</a></li>
+                <li><a href="#gallery">Галерия</a></li>
+                <li><a href="#video">Видео</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="intro">
+            <h2>Добре дошли в Лондон!</h2>
+            <p>Лондон - градът на културата, историята и кралските традиции, ви очаква с безкрайни възможности за открития.</p>
+        </section>
+		
+		<section id="anthem" class="intro">
+    <h2>Националният химн на Обединеното кралство</h2>
+    <p>Слушайте официалния национален химн на Обединеното кралство.</p>
+    <audio controls>
+        <source src="audio/united_kingdom_anthem.mp3" type="audio/mpeg">
+		<source src="audio/united_kingdom_anthem.ogg" type="audio/ogg">
+		<source src="audio/united_kingdom_anthem.mp3.mp3" type="audio/mpeg">
+        Tarayıcınız bu ses dosyasını desteklemiyor. Dosyayı <a href="audio/united_kingdom_anthem.mp3">buradan</a> indirebilirsiniz.
+    </audio>
+</section>
+
+        <section id="history" class="intro">
+            <h2>История на Лондон</h2>
+            <p>Въпреки че са известни следи от неолита и бронзовата епоха, датиращи от 1500 г. пр. н. е. и селищен слой от древните британци, се приема, че Лондон е основан от римляните преди около 2000 години. Основан е под името Лондиниум след нахлуването на Римската империя във Великобритания през 43 г. пр.н.е. Въпреки че няма окончателна информация за произхода на името, се смята, че значението му може да е "течаща река". Според Geofrey of Monmouth името всъщност се основава на келтския бог Ludd. Според легендата, градът, който преди се е наричал "Trinovantum", е преименуван на "Caer Ludd".
+            </p>
+            <p>Лондон е един от най-старите градове в света. По отношение на туризма историческите артефакти се излагат в големи музеи. Тяхната култура всъщност започва да се разпространява по целия свят преди хиляда години. Посетители идват в Лондон от цял ​​свят. Това е резултат от това, че Лондон има дълбоко вкоренена история.</p>
+        </section>
+
+        <section id="attractions" class="highlights">
+            <h2>Забележителности</h2>
+            <ul>
+                <li>
+                    <img src="bigben.png" alt="Биг Бен">
+                    <p>Посетете Биг Бен и Уестминстърския дворец</p>
+                </li>
+                <li>
+                    <img src="most.png" alt="Тауър Бридж">
+                    <p>Разгледайте емблематичния Тауър Бридж</p>
+                </li>
+                <li>
+                    <img src="british museum.png" alt="Британски музей">
+                    <p>Открийте съкровищата на Британския музей</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="culture" class="intro">
+            <h2>Култура и кухня</h2>
+            <p>Насладете се на разнообразната култура на Лондон и опитайте традиционни ястия като "fish and chips" и английски чай.</p>
+            <ol>
+                <li><strong>Поздравителен етикет:</strong> Поздравите в Лондон обикновено са учтиви и сдържани. Когато се срещате с някого за първи път, здравото ръкостискане и приятелската усмивка са обичайни. Обичайно е да казвате „Здрасти“ или „Радвам се да се запознаем“. Прегръдка или целувка по бузата (обикновено само една) може да се случи между приятели, но най-добре е първо да изчакате и да видите какво прави другият.</li>
+                <li><strong>Внимавайте с опашката:</strong> Да чакаш на опашка е голяма работа в Лондон. Когато чакате автобуса, в супермаркета или купувате билети, винаги се нареждайте на опашка и чакайте своя ред. Скачането от опашката се счита за много грубо поведение. Лондончани приемат реденето на опашка много сериозно, така че спазвайте тази традиция, за да избегнете мръщенето или неодобрителни погледи.</li>
+                <li><strong>Бъдете точни:</strong> Точността е много важна в Лондон. Ако имате среща, среща или курс по английски в Лондон, опитайте се да пристигнете навреме или няколко минути по-рано. Закъснението може да се разглежда като неуважение или непрофесионализъм. Ако закъснявате, моля, бъдете любезни да уведомите този човек, за да можем да се срещнем с вас възможно най-скоро.</li>
+                <li><strong>Добротата има значение:</strong> Лондончаните обикновено са учтиви и очакват същото от другите. Важно е често да използвате думите „моля“, „благодаря“, „извинете“ и „съжалявам“. Тези малки думи могат да направят много добро впечатление. Например, ако случайно се сблъскате с някого, едно бързо „Извинете!“ Ще бъде оценено.</li>
+            </ol>
+        </section>
+
+        <section id="gallery" class="highlights">
+            <h2>Галерия</h2>
+            <ul>
+                <li>
+                    <img src="the tower of london.png" alt="Тауърът на Лондон">
+                    <p>Тауърът на Лондон - символ на историята</p>
+                </li>
+                <li>
+                    <img src="hyde park.png" alt="Хайд Парк">
+                    <p>Разходка из красивия Хайд Парк</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="video" class="intro">
+            <h2>Лондон Видео</h2>
+            <p>Лондон от птичи поглед</p>
+            <video controls width="600" height="340">
+                <source src="1%20Minute%20of%20LONDON.mp4" type="video/mp4">
+                Вашият браузър не поддържа вградени видеоклипове. Моля, изтеглете видеото <a href="1%20Minute%20of%20LONDON.mp4">тук</a>.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 London a Hoşgeldiniz. Всички права запазени.</p>
+    </footer>
+</body>
+</html>

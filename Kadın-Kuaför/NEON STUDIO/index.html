@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON STUDIO | Premium Hair Artistry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #00f2ff;
+            --bg: #050505;
+            --card-bg: #0f0f0f;
+            --text-muted: #888;
+            --neon-glow: 0 0 15px rgba(0, 242, 255, 0.5);
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; margin: 0; overflow-x: hidden; }
+
+        /* Navigation */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(5,5,5,0.9); backdrop-filter: blur(10px);
+            padding: 20px 5%; display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        .logo { font-family: 'Syne', sans-serif; color: var(--accent); font-size: 1.5rem; letter-spacing: 3px; text-shadow: var(--neon-glow); text-decoration: none; }
+        .nav-links a { color: #fff; text-decoration: none; margin-left: 30px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Sections */
+        section { padding: 100px 5%; max-width: 1400px; margin: 0 auto; opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        section.visible { opacity: 1; transform: translateY(0); }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-family: 'Syne', sans-serif; font-size: 3rem; text-transform: uppercase; margin: 10px 0; }
+        .section-header span { color: var(--accent); letter-spacing: 5px; text-transform: uppercase; font-size: 0.8rem; }
+
+        /* Hero */
+        #home { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        #home h1 { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 10vw, 7rem); margin: 0; line-height: 0.8; text-transform: uppercase; }
+        .hero-tagline { color: var(--text-muted); letter-spacing: 8px; margin-top: 20px; text-transform: uppercase; }
+
+        /* Hair Catalog Grid */
+        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+        .hair-card { background: var(--card-bg); border: 1px solid #1a1a1a; transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .hair-card:hover { border-color: var(--accent); box-shadow: var(--neon-glow); transform: translateY(-10px); }
+        .image-wrapper { aspect-ratio: 3/4; position: relative; background: #000; overflow: hidden; }
+        .image-wrapper img { position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease; }
+        .image-wrapper img.active { opacity: 1; }
+        .card-info { padding: 25px; }
+        .style-no { color: var(--accent); font-size: 0.7rem; font-weight: bold; }
+        .hair-name { font-family: 'Syne', sans-serif; font-size: 1.2rem; margin: 5px 0 0; text-transform: uppercase; }
+
+        /* Services */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .service-card { padding: 40px; border: 1px solid #1a1a1a; background: var(--card-bg); transition: 0.3s; }
+        .service-card:hover { background: #151515; border-color: var(--accent); }
+        .service-card h3 { color: var(--accent); font-family: 'Syne', sans-serif; margin-top: 0; }
+        .price { font-size: 1.8rem; font-weight: 800; margin: 15px 0; }
+
+        /* Form */
+        .booking-form { max-width: 600px; margin: 0 auto; background: var(--card-bg); padding: 50px; border: 1px solid #1a1a1a; }
+        input, select, textarea { width: 100%; padding: 15px; margin-bottom: 20px; background: #050505; border: 1px solid #222; color: #fff; font-family: inherit; }
+        input:focus { border-color: var(--accent); outline: none; }
+        .submit-btn { width: 100%; padding: 20px; background: var(--accent); color: #000; border: none; font-weight: 800; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Testimonials */
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .testimonial-item { padding: 30px; border-left: 2px solid var(--accent); background: rgba(255,255,255,0.02); }
+        .client-info { display: flex; align-items: center; margin-top: 20px; }
+        .client-img { width: 50px; height: 50px; border-radius: 50%; background: #333; margin-right: 15px; }
+
+        /* Contact & Map */
+        .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .map-box { height: 100%; min-height: 300px; background: #111; border: 1px solid #222; display: flex; align-items: center; justify-content: center; color: #444; }
+
+        footer { padding: 60px 5%; border-top: 1px solid #1a1a1a; text-align: center; color: #444; font-size: 0.8rem; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .contact-content { grid-template-columns: 1fr; }
+            #home h1 { font-size: 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home" class="logo">NEON STUDIO</a>
+        <div class="nav-links">
+            <a href="#catalog">Catalog</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#book">Book Now</a>
+        </div>
+    </nav>
+
+    <div id="home">
+        <h1>NEON<br>ARTISTRY</h1>
+        <p class="hero-tagline">Evolution of Style</p>
+    </div>
+
+    <section id="catalog">
+        <div class="section-header">
+            <span>The Collection</span>
+            <h2>Signature Cuts</h2>
+        </div>
+        <div class="catalog-grid" id="catalogContainer"></div>
+    </section>
+
+    <section id="services">
+        <div class="section-header">
+            <span>Treatments</span>
+            <h2>Our Services</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card"><h3>Haircut</h3><div class="price">$95</div><p>Expert tailoring and precision framing.</p></div>
+            <div class="service-card"><h3>Color</h3><div class="price">$150</div><p>Advanced color melting and balayage.</p></div>
+            <div class="service-card"><h3>Styling</h3><div class="price">$70</div><p>High-fashion blowouts and waves.</p></div>
+            <div class="service-card"><h3>Repair</h3><div class="price">$50</div><p>Molecular bond rebuilding treatments.</p></div>
+        </div>
+    </section>
+
+    <section id="about" style="text-align: center; max-width: 800px;">
+        <div class="section-header">
+            <span>Philosophy</span>
+            <h2>The Studio</h2>
+        </div>
+        <p style="font-size: 1.2rem; color: #ccc;">Founded in 2026, NEON STUDIO is a sanctuary for women who seek more than just a haircut. We believe in high-contrast artistry and molecular-level hair care. Our team of visionary stylists is dedicated to translating global trends into your personal signature look.</p>
+    </section>
+
+    <section id="reviews">
+        <div class="testimonial-grid">
+            <div class="testimonial-item">
+                <p>"The hover catalog is genius, but the actual cut was even better. Pure perfection."</p>
+                <div class="client-info"><div class="client-img"></div><strong>Julianna M.</strong></div>
+            </div>
+            <div class="testimonial-item">
+                <p>"Finally a salon that understands modern textures and neon aesthetics."</p>
+                <div class="client-info"><div class="client-img"></div><strong>Sophia L.</strong></div>
+            </div>
+            <div class="testimonial-item">
+                <p>"High-end service with a futuristic vibe. My new regular spot."</p>
+                <div class="client-info"><div class="client-img"></div><strong>Amara W.</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="book">
+        <div class="section-header">
+            <span>Reservation</span>
+            <h2>Book Appointment</h2>
+        </div>
+        <div class="booking-form">
+            <form id="appointmentForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <select required>
+                    <option value="">Select Service</option>
+                    <option>Signature Cut</option>
+                    <option>Master Coloring</option>
+                    <option>Editorial Styling</option>
+                </select>
+                <input type="date" required>
+                <button type="submit" class="submit-btn">Confirm Request</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-content">
+            <div class="map-box">[ Interactive Google Map ]</div>
+            <div>
+                <h3 style="font-family: 'Syne'; font-size: 2rem;">LOCATION</h3>
+                <p>77 Crystal Street, Neon District</p>
+                <p>Phone: +1 (555) NEON-STYLE</p>
+                <p>Email: studio@neon-hair.com</p>
+                <div style="margin-top: 30px;">
+                    <a href="#" style="color:var(--accent); text-decoration: none; margin-right: 20px;">INSTAGRAM</a>
+                    <a href="#" style="color:var(--accent); text-decoration: none;">TIKTOK</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 NEON STUDIO | VISIONARY HAIR CONCEPTS | BUILT FOR THE AVANT-GARDE
+    </footer>
+
+    <script>
+        const haircuts = [
+            { name: "Asymmetrical Bob", dir: "Asimetrik-Bob-Lob", imgs: ["Asimetrik-Bob.jpg", "Asimetrik-Bob-side.jpg", "Asimetrik-Bob-back.jpg"] },
+            { name: "Blunt Cut Precision", dir: "Blunt-Cut-Kut-Uclu-Duz-Kesim", imgs: ["Blunt-Cut.jpg", "Blunt-Cut-side.jpg", "Blunt-Cut-back.jpg"] },
+            { name: "Curtain Bangs", dir: "Curtain-Bangs", imgs: ["Curtain-Bangs.jpg", "Curtain-Bangs-side.jpg", "Curtain-Bangs-back.jpg"] },
+            { name: "Layered Medium", dir: "Layered-Medium-Cut", imgs: ["Layered-Medium-Cut.jpg", "Layered-Medium-Cut-side.jpg", "Layered-Medium-Cut-back.jpg"] },
+            { name: "Classic Bob", dir: "Klasik-Bob", imgs: ["Klasik-Bob.jpg", "Klasik-Bob-side.jpg", "Klasik-Bob-back.jpg", "Klasik-Bob-angle1.jpg", "Klasik-Bob-angle2.jpg", "Klasik-Bob-angle3.jpg"] },
+            { name: "Long Bob (Lob)", dir: "Long-Bob", imgs: ["Long-Bob.jpg", "Long-Bob-side.jpg", "Long-Bob-back.jpg", "Long-Bob-angle1.jpg", "Long-Bob-angle2.jpg", "Long-Bob-angle3.jpg"] },
+            { name: "Minimal Layers", dir: "Minimal-Katli-Uzun-Sac", imgs: ["Minimal-Katli-Uzun-Sac.jpg", "Minimal-Katli-Uzun-Sac-side.jpg", "Minimal-Katli-Uzun-Sac-back.jpg"] },
+            { name: "Pixie Cut", dir: "Pixie-Cut", imgs: ["Pixie-Cut.jpg", "Pixie-Cut-side.jpg", "Pixie-Cut-back.jpg"] },
+            { name: "Signature Shag", dir: "Shag-Cut", imgs: ["Shag-Cut.jpg", "Shag-Cut-side.jpg", "Shag-Cut-back.jpg"] },
+            { name: "Soft Wave Flow", dir: "Soft-Waves", imgs: ["Soft-Waves.jpg", "Soft-Waves-side.jpg", "Soft-Waves-back.jpg"] }
+        ];
+
+        const grid = document.getElementById('catalogContainer');
+
+        haircuts.forEach((hair, index) => {
+            const card = document.createElement('div');
+            card.className = 'hair-card';
+            
+            let imgTags = hair.imgs.map((img, i) => 
+                `<img src="model/${hair.dir}/${img}" class="${i === 0 ? 'active' : ''}" onerror="this.src='https://via.placeholder.com/400x533/000/00f2ff?text=IMAGE+ARCHIVE'">`
+            ).join('');
+
+            card.innerHTML = `
+                <div class="image-wrapper">${imgTags}</div>
+                <div class="card-info">
+                    <span class="style-no">MOD No. ${100 + index}</span>
+                    <h3 class="hair-name">${hair.name}</h3>
+                </div>
+            `;
+
+            let cycle;
+            card.addEventListener('mouseenter', () => {
+                const images = card.querySelectorAll('img');
+                if (images.length < 2) return;
+                let current = 0;
+                cycle = setInterval(() => {
+                    images[current].classList.remove('active');
+                    current = (current + 1) % images.length;
+                    images[current].classList.add('active');
+                }, 1000);
+            });
+
+            card.addEventListener('mouseleave', () => {
+                clearInterval(cycle);
+                const images = card.querySelectorAll('img');
+                images.forEach((img, i) => {
+                    img.classList.remove('active');
+                    if(i === 0) img.classList.add('active');
+                });
+            });
+
+            grid.appendChild(card);
+        });
+
+        // Intersection Observer for Section Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
