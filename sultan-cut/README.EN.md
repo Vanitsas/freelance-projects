@@ -4,7 +4,7 @@ A freelance project built for a premium barber shop client. Clean, dark luxury d
 
 ## 🔗 Live Demo
 
-> _Coming soon / add link here_
+https://sultan-cut.netlify.app
 
 ## ✨ Features
 

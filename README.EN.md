@@ -6,9 +6,9 @@ A collection of freelance websites built for small business clients. Each projec
 
 | Project | Type | Tech | Live |
 |---|---|---|---|
-| [Sultan Cut](./sultan-cut/) | Barber Shop | HTML, CSS, JS | Coming soon |
-| [Neon Studio](./Kadın-Kuaför/NEON%20STUDIO/) | Women's Hair Salon | HTML, CSS, JS | Coming soon |
-| [Keyif Cafe](./Normal-Cafe/) | Cafe | HTML, CSS, JS | Coming soon |
+| [Sultan Cut](./sultan-cut/) | Barber Shop | HTML, CSS, JS | https://sultan-cut.netlify.app |
+| [Neon Studio](./Kadın-Kuaför/NEON%20STUDIO/) | HTML, CSS, JS | https://neon-hair-studio.netlify.app |
+| [Keyif Cafe](./Normal-Cafe/) | Cafe | HTML, CSS, JS | https://keyif-cafe.netlify.app |
 
 ## 🛠 Built With
 

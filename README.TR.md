@@ -6,9 +6,9 @@ Küçük işletme müşterileri için yapılmış freelance web sitelerinin kole
 
 | Proje | Tür | Teknoloji | Canlı |
 |---|---|---|---|
-| [Sultan Cut](./sultan-cut/) | Berber Dükkanı | HTML, CSS, JS | Yakında |
-| [Neon Studio](./Kadın-Kuaför/NEON%20STUDIO/) | Kadın Kuaförü | HTML, CSS, JS | Yakında |
-| [Keyif Cafe](./Normal-Cafe/) | Kafe | HTML, CSS, JS | Yakında |
+| [Sultan Cut](./sultan-cut/) | Berber Dükkanı | HTML, CSS, JS | https://sultan-cut.netlify.app |
+| [Neon Studio](./Kadın-Kuaför/NEON%20STUDIO/) | Kadın Kuaförü | HTML, CSS, JS | https://neon-hair-studio.netlify.app |
+| [Keyif Cafe](./Normal-Cafe/) | Kafe | HTML, CSS, JS | https://keyif-cafe.netlify.app |
 
 ## 🛠 Kullanılan Teknolojiler
 

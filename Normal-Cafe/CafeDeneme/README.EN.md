@@ -4,7 +4,7 @@ A freelance project built for a cozy local cafe. Warm cream and brown tones, foc
 
 ## 🔗 Live Demo
 
-> _Coming soon / add link here_
+https://keyif-cafe.netlify.app
 
 ## ✨ Features
 

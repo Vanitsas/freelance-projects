@@ -4,7 +4,7 @@ A freelance project built for a women's hair salon. Futuristic dark theme with n
 
 ## 🔗 Live Demo
 
-> _Coming soon / add link here_
+https://neon-hair-studio.netlify.app
 
 ## ✨ Features
 

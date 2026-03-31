@@ -4,7 +4,7 @@ Bir premium berber dükkanı için yapılmış freelance proje. Altın renkli ak
 
 ## 🔗 Canlı Demo
 
-> _Yakında / linki buraya ekle_
+https://sultan-cut.netlify.app
 
 ## ✨ Özellikler
 

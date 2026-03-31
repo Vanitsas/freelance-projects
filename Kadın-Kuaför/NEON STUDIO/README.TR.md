@@ -4,7 +4,7 @@ Bir kadın kuaför salonu için yapılmış freelance proje. Neon cyan aksanlı 
 
 ## 🔗 Canlı Demo
 
-> _Yakında / linki buraya ekle_
+https://neon-hair-studio.netlify.app
 
 ## ✨ Özellikler
 

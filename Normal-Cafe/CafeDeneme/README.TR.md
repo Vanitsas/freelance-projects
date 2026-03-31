@@ -4,7 +4,7 @@ Samimi bir yerel kafe için yapılmış freelance proje. Sıcak krem ve kahveren
 
 ## 🔗 Canlı Demo
 
-> _Yakında / linki buraya ekle_
+https://keyif-cafe.netlify.app
 
 ## ✨ Özellikler
 
